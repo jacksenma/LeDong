@@ -7,103 +7,126 @@
     <!-- 引入 Bootstrap -->
     <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
-
+    <link href='//cdn.webfont.youziku.com/webfonts/nomal/92939/19451/57fe1d12f629d812e497e1ab.css' rel='stylesheet' type='text/css' />
     <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
     <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
     <!--[if lt IE 9]>
-         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-      <![endif]-->
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
 <div class="main">
     <header><!--页头-->
-        <nav>
-            <ul>
-                <li class="logo"><a href="#">乐动</a></li>
-                <li><a href="#">连接1</a></li>
-                <li><a href="#">连接1</a></li>
-                <li><a href="#" class="active">首页</a></li>
-            </ul>
-
-        </nav>
         <div id="banner">
             <div class="inner">
 
 
-                <h1>乐动</h1>
+                <h1 class="css65dcad68a16b0b">乐动</h1>
+
+                <p class="sub-heading">与世界分享你的运动快乐</p>
                 <hr>
-                <p class="sub-heading">爱运动，爱乐动</p>
-                <button>了解我</button>
-                <div class="more">
-                    <!--<a onclick="click_scroll();">更多</a>-->
-                    <a href="#" onclick="click_scroll();">更多</a>
-                    <!--<input type="button" value="点击button跳转" onclick="click_scroll();" />-->
+                <div class="tag">
+                    <ul id="myTab" class="nav nav-tabs">
+                        <li class="active" id="aIn">
+                            <a href="#signIn" data-toggle="tab">
+                                登录
+                            </a>
+                        </li>
+                        <li id="aUp"><a href="#signUp" data-toggle="tab" >注册</a></li>
+                    </ul>
+
+
+                    <div id="myTabContent" class="tab-content">
+
+                        <div class="tab-pane fade in active" id="signIn">
+                            <form class="form-horizontal" role="form">
+                                <!--用户名-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="InUsername" placeholder="用户名">
+                                    </div>
+                                </div>
+                                <!--密码-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="InPassword" placeholder="密码">
+                                    </div>
+                                </div>
+
+                                <!--记住我-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox">请记住我
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--登录按钮-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn btn-info btn-block">登录</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <!--注册模块-->
+                        <div class="tab-pane fade" id="signUp">
+                            <form class="form-horizontal" role="form">
+                                <!--用户名-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input type="text" class="form-control" id="UpUsername" placeholder="用户名">
+                                    </div>
+                                </div>
+                                <!--密码-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input type="password" class="form-control" id="UpPassword" placeholder="密码(6~12位)">
+                                    </div>
+                                </div>
+
+                                <!--记住我-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <input type="password" class="form-control" id="UpPasswordAgain" placeholder="重复所输密码">
+                                    </div>
+                                </div>
+
+
+                                <!--验证码-->
+
+
+
+                                <!--注册按钮-->
+                                <div class="form-group">
+                                    <div class="col-sm-12">
+                                        <button type="submit" class="btn btn-info btn-block">注册</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <div id="content">
-            <section id="green" class="green-section">
-                <div class="wrapper">
-                    <div>
-                        <h2>一个标题</h2>
-                        <div class="hr"></div>
-                        <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab accusantium aliquam commodi consequatur, debitis est eum id illum ipsa ipsum labore magnam nesciunt odit officiis, quisquam soluta tempora. Incidunt, laborum.</p>
-
-                    </div>
 
 
-                    <div class="icon-group">
-                        <span class="icon">item</span>
-                        <span class="icon">item</span>
-                        <span class="icon">item</span>
-                    </div>
 
-                </div>
-            </section>
-            <section class="gray-section">
-                <div class="article-preview">
-                    <div class="img-section">
-                        <img src="img/pic01.jpg" alt="\" class="aaa">
-                    </div>
-                    <div class="text-section">
-                        <h2>有一个标题</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci aliquam consequatur cupiditate, debitis, dolor dolorum ea enim iusto nesciunt nihil obcaecati odio perspiciatis quidem, quisquam ratione tempore ut veniam?</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="purple-section"></section>
-
-    </div>
-
-    <footer><!--页脚-->
-        <ul class="share-group">
-            <li>item1</li>
-            <li>item2</li>
-            <li>item3</li>
-            <li>item4</li>
-            <li>item5</li>
-        </ul>
-        <div class="copy" style="text-align: center">
-            &copy JACK
-        </div>
-    </footer>
 </div>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="https://code.jquery.com/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->
-<!--<script src="js/bootstrap.min.js"></script>-->
-<script type="text/javascript">
-    function click_scroll() {
-        var scroll_offset = $("#content").offset(); //得到pos这个div层的offset，包含两个值，top和left
-        $("body,html").animate({
-            scrollTop:scroll_offset.top //让body的scrollTop等于pos的top，就实现了滚动
-        },1000);
-    }
-</script>
+<script src="js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

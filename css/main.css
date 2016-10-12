@@ -1,49 +1,14 @@
-nav{
 
-    /*background: #9F9386;*/
-    height: 50px;/*行高与li,a一致*/
-
-}
 header{
     background: rgba(0,0,0,0.4);//调节header的亮度
 }
 #banner{
     height: 700px;
-    /*background-image:url("../img/banner.jpg");*/
-    /*background-position: bottom;*/
-    /*background-color:#ff0000;*/
-    /*opacity: 400;*/
-    /*filter: brightness(2.3);*/
-    /*opacity:0.5;*/
-    /*filter:"alpha(opacity=50)";*/
+
 
 
 }
 
-nav ul{/*nav下的ul标签*/
-    list-style: none;/*去除原有样式*/
-
-    margin: 0;
-}
-
-nav ul li{
-    display: inline-block;/*把竖着的改成横着的*/
-    line-height: 50px;
-    float: right;/*向右浮动*/
-    margin-right: 20px;/*每个li的右边距*/
-}
-
-nav ul li a{
-    line-height: 50px;
-    text-decoration: none;/*去除a标签原有的下划线*/
-    display: inline-block;/*行内block，扩大a的响应范围*/
-    height: inherit;/*继承父元素的高度*/
-    color: white;
-}
-
-nav ul li.logo{/*nav下的ul下的li标签下的类名为logo的那个li,注意.紧跟在li后面*/
-    float: left;
-}
 
 #banner .inner{
     max-width: 300px;
@@ -55,6 +20,7 @@ nav ul li.logo{/*nav下的ul下的li标签下的类名为logo的那个li,注意.
 #banner .inner h1{/*　.和前面分开*/
     margin: 0;
     color: white;
+    font-size: 150px;
 }
 button{
     border:none;/*去边框*/
@@ -67,132 +33,34 @@ button{
 #banner button{
     padding:14px 60px;
 }
-#banner .inner .more{
-    margin-top: 220px;/*上边距*/
 
-}
 .sub-heading{
     line-height:30px;
-    margin: 30px;
     color: white;
+    font-size: 18px;
+    margin: 2px;
 }
 
-.logo{
-    font-size: 20px;
-    font-weight: 700;/*加粗*/
-    letter-spacing: 3px;/*字母之间的距离*/
 
-}
-.logo a{
-    color: white;
-}
 hr{
     position: relative;
-    width: 120px;
+    width: 300px;
     height:2px;
     border:none;
     border-top:2px solid white;
     top:5px;
-    /*bottom: 20px;*/
     margin-top: 0;
-    /*padding-top: 20px;*/
-    /*padding-bottom: 20px;*/
-    /*margin-bottom: 0;*/
-}
-.hr{
-    width: 100%;
-    height: 2px;
-    margin: 20px auto;
 
 }
-.green-section{
-    text-align: center;
-    background-color: #00bcd4;
-    color: white;
-    padding:100px 0;
-}
-.green-section .hr{
-    background-color: #9F9386;
-    width: 60%;
-}
-.green-section .icon-group .icon{
-    display: inline-block;
-    width: 80px;
-    height: 80px;
-    background-color: #49a78d;
-    transform: rotate(45deg);
-    margin: 20px;
-}
-.icon-group{
-    margin-top: 60px;
-}
-.wrapper{
-    max-width: 1080px;
-    margin: 0 auto;
-}
-.sub-heading{
-    font-size: 18px;
-}
-.gray-section{
-    background-color: #3c3a32;
-    color: white;
-}
-.gray-section .img-section{
-    width:45%;
-}
-.img-section img{
-    width: 100%;
 
-}
+
+
+
 ul{
     margin: 0;
 }
 
-.gray-section .text-section{
-    width: 55%;
-}
 
-.article-preview > div{
-    float: left;
-}
-.article-preview:after{
-    content: '';
-    display: block;
-    clear: both;
-}
-.text-section{
-    position: relative;
-    top: 68px;
-    left: 50px;
-}
-.text-section h2{
-    mso-grid-bottom: 20px;
-}
-
-.text-section p{
-    font-size: 18px;
-    letter-spacing: 1px;
-}
-footer{
-    background-color: pink;
-    color: #000;
-    min-height: 200px;
-    text-align: center;
-}
-
-ul.share-group{
-    display: block;
-    width: 1080px;
-    margin:0 auto;
-    padding: 50px;
-}
-.share-group li{
-    display: inline-block;
-    padding: 10px;
-}
-.copy{
-    padding: 20px;
-}
 
 .main{
     background: #99ff99 url(../img/run1.png);
@@ -202,7 +70,29 @@ ul.share-group{
     background-size:cover;
     /*background-position: bottom center;*/
     background-position: center center;
+    margin: 0;
 
 }
 
+/*登录与注册*/
+
+.tag{
+    margin-top: 20px;
+    text-align: center;
+}
+#myTab > li{
+    width:50%;
+    font-size: 18px;
+}
+#signUp{
+    margin-top: 20px;
+    text-align: center;
+}
+#signIn{
+    margin-top: 20px;
+    text-align: center;
+}
+/*#myTabContent{*/
+    /*!*margin-bottom: 50px;*!*/
+/*}*/
 
