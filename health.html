@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>乐动-运动</title>
+    <link rel="icon" type="image/x-icon" href="http://115.159.206.120/favicon(1).ico" media="screen" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/normalize.css" rel="stylesheet">
+    <!-- 引入 Bootstrap -->
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/health.css" rel="stylesheet">
+    <link href="./css/css.css" rel="stylesheet">
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+         <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+      <![endif]-->
+</head>
+<body class="health">
+
+<div class="tag">
+    <!--导航-->
+    <div class="nav">
+        <ul id="myTab" class="">
+            <li class="main" id="head_nav"><a href="main.html">首页</a></li>
+            <li class="health" id="health_nav"><a href="health.html">运动</a></li>
+            <li class="activity" id="activity_nav"><a href="activity.html">活动</a></li>
+            <li class="society" id="society_nav"><a href="society.html">社交</a></li>
+            <!--<li id="society_nav"><a href="#society" data-toggle="tab" >社交</a></li>-->
+            <img src="./img/banner.jpg" id="user">
+        </ul>
+
+
+        <!--<div class="triangle-up">     &lt;!&ndash;向上的三角&ndash;&gt; </div>-->
+    </div>
+
+
+
+    </div>
+<!--侧边栏-->
+<div class="sub_nav">
+    <ul id="sub_health" class="">
+        <li id="jk">健康管理</li>
+        <li id="health_wode"><a href="#health_mySport" data-toggle="tab" >我的运动</a></li>
+        <li id="health_shenti"><a href="#health_myBody" data-toggle="tab" >身体管理</a></li>
+        <li id="health_sleep"><a href="#health_mySleep" data-toggle="tab" >睡眠分析</a></li>
+    </ul>
+</div>
+
+
+<div id="myTabContent" class="tab-content">
+    <!--运动-->
+
+    <div class="tab-pane fade" id="health">
+
+        <!--<div id="container" style="width: 400px; height: 400px; margin: 0 auto">-->
+        <!--</div>-->
+        <h3>昨日健康状况</h3>
+
+        <!--<div id="sleep" style="height:200px;width:330px"></div>-->
+
+    </div>
+    <!--我的运动-->
+    <div class="tab-pane fade" id="health_mySport">
+        <div id="yesterday_run">
+            <h3>昨日运动</h3>
+            <div id="run" style="height:200px;width:330px"></div>
+            <div id="runul">
+                <ul>
+                    <li class="rp_contentBoxFirst co6 tl">
+                        <span class="co8">运动距离</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f30 co6">12</span>公里
+                    </li>
+                    <li class="rp_contentBox co6 tc">
+                        <span class="co8">运动时长</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f30 co6">7</span>小时<span class="f30 co6">26</span>分钟
+                    </li>
+                    <li class="rp_contentBoxL co6 tc">
+                        <span class="co8">燃烧热量</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f30 co6">6000</span>大卡
+                    </li>
+                    <li class="rp_contentBoxLast co6 tc" style="padding-top:0;">
+                        <span class="co8">运动步数</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="f30 co6">85360</span>步
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="sum">
+            <h3>累计运动</h3>
+            <ul>
+                <li><img src="./img/distance.svg" id="distance"><span class="s">累计运动距离</span><br><span class="sp">152</span><span>公里</span></li>
+                <li><img src="./img/time.svg" id="time"><span class="s">累计运动时间</span><br><span class="sp">235</span><span>天</span></li>
+                <li><img src="./img/kaluli.svg" id="kaluli"><span class="s">累计消耗热量</span><br><span class="sp">156842</span><span>大卡</span></li>
+
+            </ul>
+        </div>
+        <div id="rank">
+            <!--<span id="ranking_title">我的排行：3</span>-->
+            <section id="ranking">
+                <span id="ranking_title">我的排行：3</span>
+                <hr>
+                <section id="ranking_list">
+
+                    <section class="box">
+                        <section class="col_1" title="1">1</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#"><a href="#">乐动用户</a></a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box">
+                        <section class="col_1" title="2">2</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box cur">
+                        <section class="col_1" title="3">3</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box">
+                        <section class="col_1">4</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box">
+                        <section class="col_1">5</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box">
+                        <section class="col_1">6</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                </section>
+            </section>
+
+
+            <!--<span id="ranking_title">我的排行：3</span>-->
+            <section id="ranking_friend">
+                <span id="ranking_friend_title">我的排行：3</span>
+                <hr>
+                <section id="ranking_friend_list">
+
+                    <section class="box">
+                        <section class="col_1" title="1">1</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box">
+                        <section class="col_1" title="2">2</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box cur">
+                        <section class="col_1" title="3">3</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box">
+                        <section class="col_1">4</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box">
+                        <section class="col_1">5</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                    <section class="box">
+                        <section class="col_1">6</section>
+                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
+                        <section class="col_3"><a href="#">乐动用户</a></section>
+                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
+                    </section>
+                </section>
+            </section>
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <!--身体管理-->
+    <div class="tab-pane fade" id="health_myBody">
+
+
+
+    </div>
+    <!--睡眠分析-->
+    <div class="tab-pane fade" id="health_mySleep">
+        <div id="yesterday_sleep">
+            <h3>昨日睡眠</h3>
+            <div id="sleep" style="height:200px;width:330px"></div>
+            <div id="sleepul">
+                <ul>
+                    <li class="rp_contentBoxFirst co6 tl">
+                        <span class="co8">睡眠开始</span><br><span class="f30 co6">22:30</span>
+                    </li>
+                    <li class="rp_contentBox co6 tc">
+                        <span class="co8">睡眠结束</span><br><span class="f30 co6">5:30</span>
+                        <!--<span class="co8">睡眠结束</span><br><span class="f30 co6">7</span>小时<span class="f30 co6">26</span>分钟-->
+                    </li>
+                    <!--<li class="rp_contentBoxL co6 tc">-->
+                    <!--<span class="co8">睡眠总长</span><br><span class="f30 co6">10</span>小时<span class="f30 co6">00</span>分钟-->
+                    <!--</li>-->
+                    <li class="rp_contentBoxL co6 tc">
+                        <span class="co8">深度睡眠</span><br><span class="f30 co6">2.1</span>小时
+                        <!--<span class="f30 co6">26</span>分钟-->
+                    </li>
+                    <li class="rp_contentBoxLast co6 tc" style="padding-top:0;">
+                        <span class="co8">睡眠质量</span><br><span class="f30 co6">中</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h3>昨日睡眠</h3>
+            <div id="yesterday_sleep_graph" style="height:300px;width:800px"></div>
+            <!--<div id="yesterday_sleep_graph"></div>-->
+        </div>
+
+
+
+    </div>
+</div>
+
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="js/bootstrap.min.js"></script>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script src="js/health.js"></script>
+</body>
+</html>

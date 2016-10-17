@@ -1,0 +1,179 @@
+body{
+    background-color: #3D3D3D;
+
+}
+body.main .nav li.main a,
+body.health .nav li.health a,
+body.activity .nav li.activity a,
+body.society .nav li.society a{
+    opacity: 1;
+}
+
+.nav{
+    /*background:olivedrab;*/
+    background: #2A2A2A;
+    /*background: #000;*/
+    height: 50px;/*行高与li,a一致*/
+
+    padding: 10px;
+
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-weight: 800;
+
+}
+
+
+
+
+.nav ul{/*nav下的ul标签*/
+    list-style: none;/*去除原有样式*/
+    /*margin-bottom: -10px;*/
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.nav ul li{
+    display: inline-block;/*把竖着的改成横着的*/
+    line-height: 50px;
+
+    margin-right: 10%;/*每个li的右边距*/
+
+
+
+
+
+}
+
+.nav ul li a:hover{
+
+    opacity: 0.9;
+
+}.nav ul li a{
+     line-height: 50px;
+     text-decoration: none;/*去除a标签原有的下划线*/
+     display: inline-block;/*行内block，扩大a的响应范围*/
+     height: inherit;/*继承父元素的高度*/
+     color: white;
+     opacity: 0.5;
+
+
+ }
+
+#user{
+    border-radius:50%;
+    width: 35px;
+    height: 35px;
+    float: left;
+    /*float: right;*/
+    /*margin: 0;*/
+    /*margin-right: 20%;*/
+    /*margin-left: 20%;*/
+}
+
+/*内容容器*/
+#myTabContent{
+    border-radius: 10px;
+    border:4px solid darkseagreen;
+    width: 65%;
+    float: right;
+    margin-right:10%;
+    /*margin-top: -160px;*/
+    padding: 6px;
+    margin-top: 40px;
+
+}
+/*侧边栏*/
+
+.sub_nav{
+    /*height: 30px;*/
+    display: inline-block;
+    margin-left: 4%;
+    margin-top: 20px;
+    width: 20%;
+    padding: 10px;
+
+}
+.sub_nav ul{/*nav下的ul标签*/
+    list-style: none;/*去除原有样式*/
+    text-align: center ;
+    margin: 0;
+    margin: 0 auto;
+    color: white;
+
+}
+
+.sub_nav ul li{
+
+    line-height: 40px;
+    margin: 0;
+
+
+}
+
+.sub_nav ul li a{
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 40px;
+
+    text-decoration: none;/*去除a标签原有的下划线*/
+
+    color: #499a6d;
+    margin: 0;
+
+}
+#sub_health #jk{
+    font-size: 25px;
+}
+#health > div{
+    display: inline-block;
+}
+
+/*main userInfo*/
+.userInfo{
+    margin-left: 4%;
+    margin-top: 30px;
+    width: 20%;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+
+}
+.userInfo ul li a{
+
+}
+.userInfo ul img#photo{
+
+    width: 200px;
+    height: 150px;
+    padding: 3px 3px 3px;
+    background: #fff;
+    /*border:1px solid #ddd;*/
+    border-radius: 8px;
+    /*transform: rotate(90deg);*/
+    transition: 0.5s;
+    margin-bottom: 20px;
+}
+.userInfo ul img#photo:hover{
+    transform: scale(1.3);
+}
+.userInfo ul a{
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;/*去除a标签原有的下划线*/
+}
+.userInfo ul span{
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+.userInfo ul img#identity{
+    margin-bottom: 5px;
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+

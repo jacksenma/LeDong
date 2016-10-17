@@ -1,0 +1,124 @@
+/*昨日运动*/
+#health_mySport> div{
+    border-radius: 10px;
+    /*background-color:#f1f1f1;*/
+    background-color:#dadada;
+    padding: 10px;
+    margin: 10px;
+}
+
+#run{
+    display: inline-block;
+}
+#runul{
+
+
+    float: right;
+    margin-top: 10px;
+    margin-right: 30%;
+
+}
+#runul > ul{
+    list-style: none;/*去除原有样式*/
+    margin-top:-200px;
+    margin-left: 400px;
+    width: 120%;
+}
+#runul > ul >li{
+    margin: 10px;
+}
+#runul > ul > li > span{
+    font-size: 20px;
+    font-weight:600;
+    letter-spacing: 1px;
+    margin-right: 4px;
+}
+
+#sum　ul{
+    list-style: none;
+}
+#sum ul li{
+    display: inline-block;
+    color: #ea8010;
+}
+#sum ul li img{
+
+    display: inline-block;
+    float: left;
+
+}
+#distance{
+    width: 38%;
+    height: 38%;
+    background-color: #ea8010;
+    border-radius: 50%;
+}
+#time{
+    width: 38%;
+    height: 38%;
+
+}
+#kaluli{
+    width: 44%;
+    height: 44%;
+    margin-top: -10px;
+
+}
+#sum ul li  span.s{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display:inline-block;
+    float: left;
+    margin-top: 10%;
+
+
+}
+#sum ul li  span.sp{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 10%;
+    margin-right: 4px;
+}
+
+hr{
+    width:100%;
+    margin: 3px;
+    height: 3px;
+    /*width: 120px;*/
+    /*height:2px;*/
+    border:none;
+    border-top:2px solid #f9820d;
+    top:5px;
+}
+
+/*昨日睡眠*/
+#health_mySleep> div{
+    border-radius: 10px;
+
+    background-color:#dadada;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+#sleepul ul{
+
+    float: right;
+    list-style: none;/*去除原有样式*/
+    margin-top:-18%;
+    margin-right: 20%;
+    color: cadetblue;
+
+}
+#sleepul ul >li{
+    display: inline-block;
+    margin: 5px;
+}
+#sleepul > ul > li > span{
+    font-size: 20px;
+    font-weight:600;
+    letter-spacing: 1px;
+    margin-right: 4px;
+}
