@@ -125,13 +125,12 @@ body.society .nav li.society a{
     margin: 0;
 
 }
-#sub_health #jk{
+#title{
     font-size: 25px;
 }
-#health > div{
-    display: inline-block;
-}
-
+/*#health > div{*/
+    /*display: inline-block;*/
+/*}*/
 /*main userInfo*/
 .userInfo{
     margin-left: 4%;
@@ -142,7 +141,8 @@ body.society .nav li.society a{
     text-align: center;
 
 }
-.userInfo ul li a{
+.userInfo ul li{
+    /*min-width: 150px;*/
 
 }
 .userInfo ul img#photo{
@@ -175,5 +175,7 @@ body.society .nav li.society a{
     width: 20px;
     height: 20px;
 }
+
+
 
 

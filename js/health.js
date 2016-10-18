@@ -1,4 +1,9 @@
+
+// alert(document.getElementById("health_wode_a"));
 $(function () {
+    document.getElementById("health_wode_a").click();
+    // document.getElementById("health_wode_a").click();
+
     // 路径配置
 
     // 路径配置

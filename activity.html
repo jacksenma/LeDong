@@ -9,6 +9,7 @@
     <!-- 引入 Bootstrap -->
     <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="./css/common.css" rel="stylesheet">
+    <link href="./css/activity.css" rel="stylesheet">
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
@@ -33,18 +34,290 @@
 
 
 </div>
-<!--侧边栏-->
-<div class="sub_nav">
-    <ul id="sub_health" class="">
-        <li id="jk">健康管理</li>
-        <li id="health_wode"><a href="#health_mySport" data-toggle="tab" >我的运动</a></li>
-        <li id="health_shenti"><a href="#health_myBody" data-toggle="tab" >身体管理</a></li>
-        <li id="health_sleep"><a href="#health_mySleep" data-toggle="tab" >睡眠分析</a></li>
+
+<div class="userInfo">
+    <ul>
+        <li><img id="photo" src="img/banner.jpg" ></li>
+        <li><img class="atip" data-toggle="tooltip" data-placement="top" title="" data-original-title="普通用户"  id="identity" alt="普通用户" src="img/user.svg">
+            <a href="#">西门飞雪</a>&nbsp;
+            <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级">3</span>
+        </li>
+
+        <div class="fightdiv">
+            <li class="fight">战斗胜率: <span class="fight1">85.6%</span></li>
+            <li class="fight">战斗称号: <span class="fight1">常胜将军</span></li>
+        </div>
+        <li><button id="send">发起活动</button></li>
+        <hr>
+        <div class="group">
+            <ul>
+            <li id="id1"><a class="subnav_a" id="id1_a" href="#field" data-toggle="tab" >活动场</a></li>
+            <li id="id2"><a class="subnav_a" href="#tie" data-toggle="tab" >英雄帖</a></li>
+            <li id="id3"><a class="subnav_a" href="#myActivity" data-toggle="tab" >我的活动</a></li>
+            </ul>
+        </div>
+
     </ul>
 </div>
 
 <div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade" id="field">
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><button class="more_button" onclick="">我要参加</button></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+            </ul>
+        </div>
+    </div>
 
+<!--英雄帖-->
+    <div class="tab-pane fade" id="tie">
+        <div id="MySend">
+            <h3>我收到的英雄帖</h3>
+            <div class="ac_field">
+                <ul>
+                    <li class="ac_from"><img>From  <a href="#">小月</a><br><span>有意思的活动，和我一起来参加吧！</span></li>
+                    <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                    <li class="ac_describ">
+                        <ul class="ac_ul">
+                            <li class="ac_title">城市定向越野</li>
+                            <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                            <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                        </ul>
+                    </li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                </ul>
+            </div>
+            <div class="ac_field">
+                <ul>
+                    <li class="ac_from"><img>From  <a href="#">小丽</a><br><span>哈哈哈，邀请你！</span></li>
+                    <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                    <li class="ac_describ">
+                        <ul class="ac_ul">
+                            <li class="ac_title">城市定向越野</li>
+                            <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                            <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                        </ul>
+                    </li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                </ul>
+            </div>
+            <div class="ac_field">
+                <ul>
+                    <li class="ac_from"><img>From  <a href="#">小丽</a><br><span>哈哈哈，邀请你！</span></li>
+                    <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                    <li class="ac_describ">
+                        <ul class="ac_ul">
+                            <li class="ac_title">城市定向越野</li>
+                            <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                            <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                        </ul>
+                    </li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                </ul>
+            </div>
+            <div class="ac_field">
+                <ul>
+                    <li class="ac_from"><img>From  <a href="#">小丽</a><br><span>哈哈哈，邀请你！</span></li>
+                    <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                    <li class="ac_describ">
+                        <ul class="ac_ul">
+                            <li class="ac_title">城市定向越野</li>
+                            <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                            <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                        </ul>
+                    </li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="MyReceive">
+            <h3>我发出的英雄帖</h3>
+            <div class="ac_field">
+                <ul>
+                    <li class="ac_from"><img>To  <a href="#">小月</a><br><span>有胆你就来！</span></li>
+                    <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                    <li class="ac_describ">
+                        <ul class="ac_ul">
+                            <li class="ac_title">城市定向越野</li>
+                            <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                            <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                        </ul>
+                    </li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!--我的活动-->
+    <div class="tab-pane fade" id="myActivity">
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+            </ul>
+        </div>
+        <div class="ac_field">
+            <ul>
+                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
+                <li class="ac_describ">
+                    <ul>
+                        <li class="ac_title">城市定向越野</li>
+                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
+                    </ul>
+                </li>
+                <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 
@@ -54,5 +327,7 @@
     <!-- 包括所有已编译的插件 -->
     <script src="js/bootstrap.min.js"></script>
 <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script src="js/commom.js"></script>
+<script src="js/activity.js"></script>
 </body>
 </html>
