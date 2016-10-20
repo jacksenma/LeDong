@@ -186,6 +186,7 @@ $(function () {
 
             sleepChart();
             sleepGraph();
+            weight();
             // sleep.setOption(option);
         }
     );
@@ -450,4 +451,80 @@ function sleepGraph() {
     );
 
 
+}
+
+function weight() {
+    require.config({
+        paths: {
+            echarts: 'http://echarts.baidu.com/build/dist'
+        }
+    });
+
+    // 使用
+    require(
+        [
+            'echarts',
+            'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+        ],
+        function (ec) {
+            // 基于准备好的dom，初始化echarts图表
+            // var run = ec.init(document.getElementById('run'));
+            var wei = ec.init(document.getElementById('weight_graph'));
+//样式
+            var option = {
+                title : {
+                    text: '体重变化情况',
+                    subtext: '体重/千克'
+                },
+                tooltip : {
+                    trigger: 'axis'
+                },
+                legend: {
+                    data:['体重']
+                },
+                toolbox: {
+                    show : true,
+                    feature : {
+                        mark : {show: true},
+                        dataView : {show: true, readOnly: false},
+                        magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                calculable : true,
+                xAxis : [
+                    {
+                        type : 'category',
+                        boundaryGap : false,
+                        data : ['2016-10-10','2016-10-11','2016-10-12','2016-10-13','2016-10-14','2016-10-15','2016-10-16',
+                            '2016-10-17','2016-10-18','2016-10-19','2016-10-20','2016-10-21','2016-10-22','2016-10-23','2016-10-24','2016-10-25','2016-10-26']
+                    }
+                ],
+                yAxis : [
+                    {
+                        // type : 'value',
+                        // type : 'category',
+                        // data :['深度睡眠','浅度睡眠','唤醒']
+                    }
+                ],
+                series : [
+                    {
+                        name:'体重',
+                        type:'line',
+                        smooth:true,
+                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                        // data:[0,0.1,0.2,0.5,0.8,0.4,0.8,0.3,0.2,0.24,0.26,0.5,0.6,0.95,5]
+                        data:[58.3,58.3,58.2,58.2,58.2,58.3,59.0,59.1,59.1,59.1,59.2,59.2,59.2,59.6,59.7,59.6,60.0]
+                    }
+                ]
+            };
+
+
+
+            // 为echarts对象加载数据
+            wei.setOption(option);
+
+        }
+    );
 }

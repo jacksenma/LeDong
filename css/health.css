@@ -1,3 +1,26 @@
+
+/*侧边栏*/
+
+.subnav_a{
+    max-width: 50%;
+    border:none;/*去边框*/
+    background-color: #000;/*按钮背景色*/
+    border-radius: 10px;
+    color: white;/*文字颜色*/
+    /*padding: 14px 40px;!*内边距*!*/
+    padding:8px 60px;
+    /*margin-top: 10px;*/
+    /*margin-bottom: -10px;*/
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+
+}
+.subnav_a:hover{
+    background-color: #fff;/*按钮背景色*/
+}
+
 /*昨日运动*/
 #health_mySport> div{
     border-radius: 10px;
@@ -83,14 +106,14 @@
 }
 
 hr{
-    width:100%;
-    margin: 3px;
-    height: 3px;
-    /*width: 120px;*/
-    /*height:2px;*/
-    border:none;
-    border-top:2px solid #f9820d;
-    top:5px;
+    /*width:100%;*/
+    /*margin: 3px;*/
+    /*height: 3px;*/
+    /*!*width: 120px;*!*/
+    /*!*height:2px;*!*/
+    /*border:none;*/
+    /*border-top:2px solid #f9820d;*/
+    /*top:5px;*/
 }
 
 /*昨日睡眠*/
@@ -121,4 +144,25 @@ hr{
     font-weight:600;
     letter-spacing: 1px;
     margin-right: 4px;
+}
+#health_myBody > div{
+    border-radius: 10px;
+
+    background-color:#dadada;
+    padding: 10px;
+    margin: 10px;
+}
+#suggestion{
+    font-size: 30px;
+}
+#suggestion img{
+    width: 40px;
+    height: 40px;
+    margin: 0;
+}
+
+#suggestion span{
+    font-size: 46px;
+    font-weight: 800;
+    letter-spacing: 2px;
 }

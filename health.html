@@ -17,6 +17,8 @@
 </head>
 <body class="health">
 
+
+
 <div class="tag">
     <!--导航-->
     <div class="nav">
@@ -26,7 +28,7 @@
             <li class="activity" id="activity_nav"><a href="activity.html">活动</a></li>
             <li class="society" id="society_nav"><a href="society.html">社交</a></li>
             <!--<li id="society_nav"><a href="#society" data-toggle="tab" >社交</a></li>-->
-            <img src="./img/banner.jpg" id="user">
+            <!--<img src="./img/banner.jpg" id="user">-->
         </ul>
 
 
@@ -35,14 +37,33 @@
 
 
 
-    </div>
+</div>
 <!--侧边栏-->
-<div class="sub_nav">
-    <ul id="sub" class="">
-        <li id="title">健康管理</li>
-        <li id="id1"><a id="health_wode_a" href="#health_mySport" data-toggle="tab" >我的运动</a></li>
-        <li id="id2"><a href="#health_myBody" data-toggle="tab" >身体管理</a></li>
-        <li id="id3"><a href="#health_mySleep" data-toggle="tab" >睡眠分析</a></li>
+<!--<div class="sub_nav">-->
+    <!--<ul id="sub" class="">-->
+        <!--<li id="title">健康管理</li>-->
+        <!--<li id="id1"><a id="health_wode_a" href="#health_mySport" data-toggle="tab" >我的运动</a></li>-->
+        <!--<li id="id2"><a href="#health_myBody" data-toggle="tab" >身体管理</a></li>-->
+        <!--<li id="id3"><a href="#health_mySleep" data-toggle="tab" >睡眠分析</a></li>-->
+    <!--</ul>-->
+<!--</div>-->
+<div class="userInfo">
+    <ul>
+        <li><img id="photo" src="img/banner.jpg" ></li>
+        <li><img class="atip" data-toggle="tooltip" data-placement="top" title="" data-original-title="普通用户"  id="identity" alt="普通用户" src="img/user.svg">
+            <a href="me.html">西门飞雪</a>&nbsp;
+            <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级">3</span>
+        </li>
+
+        <hr>
+        <div class="group">
+            <ul>
+                <li id="id1"><a class="subnav_a" id="health_wode_a" href="#health_mySport" data-toggle="tab" >我的运动</a></li>
+                <li id="id2"><a class="subnav_a" href="#health_myBody" data-toggle="tab" >身体管理</a></li>
+                <li id="id3"><a class="subnav_a" href="#health_mySleep" data-toggle="tab" >睡眠分析</a></li>
+            </ul>
+        </div>
+
     </ul>
 </div>
 
@@ -195,9 +216,41 @@
 
     <!--身体管理-->
     <div class="tab-pane fade" id="health_myBody">
+        <div>
+            <h3>健康状况</h3>
+            <ul>
+                <li>BMI:<span>20.8</span><span id="condition">健康</span></li>
+                <li>
+                    <form class="form-inline" action="" role="form">
+                        身高：
+                        <input type="text" class="form-control " placeholder="170">厘米
+                        <br>
+                        <br>
+                        体重：
+                        <input type="text" class="form-control " placeholder="60">千克
+                        <br>
+                        <br>
+                        <input type="submit" class="btn btn-primary" value="保存">
+
+                    </form>
+                </li>
+            </ul>
+            <!--<div id="my_BMI" style="height:500px;width:500px"></div>-->
 
 
-<p>sssssssss</p>
+
+        </div>
+
+        <div id="suggestion">
+            <img src="img/yin.svg" alt="">
+            你的理想体重<span>63.6</span>公斤，还需要摄入热量<span>10740</span>大卡，注意加强营养，合理搭配膳食！！
+        </div>
+
+        <div>
+            <div id="weight_graph" style="height:300px;width:800px"></div>
+
+        </div>
+
     </div>
     <!--睡眠分析-->
     <div class="tab-pane fade" id="health_mySleep">
@@ -244,5 +297,6 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
 <script src="js/health.js"></script>
+<script src="js/commom.js"></script>
 </body>
 </html>

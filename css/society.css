@@ -60,6 +60,14 @@ ul,li{
     width: 100%;
     margin-left: -6px;
 }
+
+#fans_list{
+    padding: 40px;
+}
+#fans_ranking{
+    width: 100%;
+    margin-left: -6px;
+}
 /*#follow_title{*/
     /*width: 100%;*/
     /*background-color: #00bcd4;*/
@@ -67,3 +75,129 @@ ul,li{
     /*padding: 14px 100px;*/
     /*margin-left: 30%;*/
 /*}*/
+#fans_list{
+    overflow-y:auto;
+    overflow-x:hidden;
+}
+button{
+    margin-top: 10px;
+}
+
+
+
+/*圈子*/
+/*#mytabcontent{*/
+    /*padding: 20px;*/
+/*}*/
+
+#circle > div{
+    border-radius: 10px;
+    /*background-color:#f1f1f1;*/
+    background-color:#dadada;
+    /*padding: 10px;*/
+    margin: 5px;
+    width:98%;
+    height: 180px;
+    /*display: inline-block;*/
+    /*display: inline-table;*/
+    padding: 0;
+    float:left;
+}
+
+#circle div img{
+    /*width:45%;*/
+    height: 100%;
+    display: inline-block;
+    width: 40%;
+    border-radius: 10px 0 0 10px ;
+    margin: 0px;
+    /*margin-left: -255px;*/
+    float: left;
+}
+/*.circle_div{*/
+    /*height: 50%;*/
+/*}*/
+.describe{
+
+}
+/*.describe ul{*/
+    /*text-align: left;*/
+/*}*/
+/*.describe li{*/
+    /*text-align: left;*/
+/*}*/
+.title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.describe{
+    display: inline-block;
+    /*mso-grid-left: 100px;*/
+    float: left;
+    margin: 40px;
+    width: 30%;
+    letter-spacing: 1px;
+
+
+
+    /*float: right;*/
+}
+
+.button_group{
+    list-style: none;/*去除原有样式*/
+    width: 20%;
+    float: right;
+
+    margin: 0;
+}
+
+.button_group li{
+    width:100%;
+    /*display: inline-block;*/
+}
+.button_group button{
+    margin: 0;
+    width: 100%;
+    border:none;/*去边框*/
+    background-color: #f67c5f;/*按钮背景色*/
+    color: white;/*文字颜色*/
+    padding:35px 40px;
+    /*padding: 14px 40px;!*内边距*!*/
+    /*padding:14px 60px;*/
+    /*margin-top: 10px;*/
+    /*margin-bottom: -10px;*/
+    /*letter-spacing: 1px;*/
+    /*font-size: 18px;*/
+    /*display: inline-block;*/
+    /*margin-bottom: -5px;*/
+}
+
+.button_group button:hover{
+    background-color: #e8522e;/*按钮背景色*/
+    height: 100%;
+}
+.b1{
+    border-radius: 0 10px 0 0;
+    /*height: 100px;*/
+    /*float: right;*/
+
+}
+.b2{
+    border-radius: 0 0 10px 0;
+    /*height: 80px;*/
+    /*margin-top: 80px;*/
+    /*float: right;*/
+
+}
+
+/*#aa{*/
+    /*visibility: hidden;*/
+/*}*/
+/*#bb{*/
+    /*display: none;*/
+/*}*/
+
+
+

@@ -58,7 +58,7 @@ html {
 	margin: 10px;
 
 }
-#ranking {
+#ranking,#fans_ranking {
 	display: inline-block;
 	/*display: block;*/
 	width: 47%;
@@ -86,7 +86,7 @@ html {
 	padding: 30px 15px;
 	 margin:1%;
 }
-#ranking_list {
+#ranking_list,#fans_ranking_list {
 	/*display: block;*/
 	display: inline-block;
 	width: 100%;
@@ -116,7 +116,7 @@ html {
  background-image: -webkit-gradient(linear,  left bottom,  left top,  color-stop(0.44, rgb(122,153,217)),  color-stop(0.72, rgb(73,125,189)),  color-stop(0.86, rgb(28,58,148)));
 }
 
-#ranking_title, #play_game, #return_back, #ranking_friend_title{
+#ranking_title, #play_game, #return_back, #ranking_friend_title,#fans_ranking_title{
 	/*display: block;*/
 	display: inline-block;
 	text-align: center;

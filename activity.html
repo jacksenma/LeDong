@@ -36,24 +36,27 @@
 </div>
 
 <div class="userInfo">
-    <ul>
+    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <li><img id="photo" src="img/banner.jpg" ></li>
         <li><img class="atip" data-toggle="tooltip" data-placement="top" title="" data-original-title="普通用户"  id="identity" alt="普通用户" src="img/user.svg">
-            <a href="#">西门飞雪</a>&nbsp;
+            <a href="me.html">西门飞雪</a>&nbsp;
             <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级">3</span>
         </li>
 
         <div class="fightdiv">
-            <li class="fight">战斗胜率: <span class="fight1">85.6%</span></li>
+            <li class="fight">战斗积分: <span class="fight1">1250</span></li>
+            <li class="fight">胜场情况: <span class="fight1">9/10</span></li>
+            <li class="fight">战斗胜率: <span class="fight1">90.0%</span></li>
             <li class="fight">战斗称号: <span class="fight1">常胜将军</span></li>
         </div>
-        <li><button id="send">发起活动</button></li>
+        <li><button id="send" onclick="faqi()">发起活动</button></li>
         <hr>
         <div class="group">
             <ul>
             <li id="id1"><a class="subnav_a" id="id1_a" href="#field" data-toggle="tab" >活动场</a></li>
             <li id="id2"><a class="subnav_a" href="#tie" data-toggle="tab" >英雄帖</a></li>
             <li id="id3"><a class="subnav_a" href="#myActivity" data-toggle="tab" >我的活动</a></li>
+         　　<li id="id4"><a class="subnav_a" id ="faqi" href="#mySet" data-toggle="tab" >发起活动</a></li>
             </ul>
         </div>
 
@@ -68,6 +71,9 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
+                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">未开始</span></li>
+                        <!--<li class="ac_num">1/2</li>-->
+                        <!--<li class="ac_condition">进行中</li>-->
                         <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
@@ -81,7 +87,8 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span></li>
+                        <li class="ac_time">2016-10-18 ~ 2016-10-28</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
@@ -94,7 +101,9 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_group"><span class="ac_kind">多人竞赛</span>&nbsp;&nbsp;<span class="ac_num">124</span>&nbsp;&nbsp;<span class="ac_condition">已结束</span></li>
+
+                        <li class="ac_time">2016-10-15 ~ 2016-10-18</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
@@ -107,7 +116,9 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span></li>
+
+                        <li class="ac_time">2016-10-13 ~ 2016-10-28</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
@@ -120,7 +131,9 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span></li>
+
+                        <li class="ac_time">2016-10-16 ~ 2016-10-28</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
@@ -133,7 +146,9 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span></li>
+
+                        <li class="ac_time">2016-10-16 ~ 2016-10-28</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
@@ -146,7 +161,9 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span></li>
+
+                        <li class="ac_time">2016-10-14 ~ 2016-10-28</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
@@ -159,7 +176,9 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span></li>
+
+                        <li class="ac_time">2016-10-13 ~ 2016-10-28</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
@@ -172,7 +191,9 @@
                 <li class="ac_describ">
                     <ul>
                         <li class="ac_title">城市定向越野</li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
+                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span></li>
+
+                        <li class="ac_time">2016-10-13 ~ 2016-10-28</li>
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
@@ -316,6 +337,69 @@
                 </li>
                 <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
             </ul>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="mySet">
+        <div>
+            <h3>发起活动</h3>
+
+            <div>
+
+                <form action="" role="form">
+                活动类型
+                    <select class="form-control">
+                        <option>单人PK</option>
+                        <option>多人竞赛</option>
+                    </select>
+                    <br>
+                活动简介
+                    <textarea class="form-control" rows="3"></textarea>
+                    <br>
+                    开始时间:
+                    <input type="date">
+                    结束时间:
+                    <input type="date">
+                    <br>
+                    <br>
+                    保证金(积分)
+                    <input type="text" class="form-control" placeholder="输入积分数">
+                    <br>
+                    参与方式
+                    <input type="radio" name="optionsRadios" id="all" value="all" checked>任何人
+                    <input type="radio" name="optionsRadios" id="friend" value="friend">邀请好友
+
+                    <br>
+                    <br>
+                    <br>
+
+                    <!--<button type="button" class="btn btn-primary">现在发起</button>-->
+                    <button type="button" class="btn btn-primary btn-lg btn-block">马上发起</button>
+                    <button type="button" class="btn btn-warning btn-lg btn-block">取消发起</button>
+
+                </form>
+            </div>
+
+
+            <!--<div>-->
+                <!--<span>活动简介</span>-->
+                <!--<form role="form">-->
+                    <!--<div class="form-group">-->
+                        <!--<label for="name">文本框</label>-->
+                        <!--<textarea class="form-control" rows="3"></textarea>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
+
+            <!--<div>-->
+                <!--<span>开始时间</span>-->
+                <!--<input type="datetime-local">-->
+
+            <!--</div>-->
+
+
+
+
         </div>
     </div>
 </div>

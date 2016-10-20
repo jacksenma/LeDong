@@ -1,0 +1,77 @@
+.subnav_a{
+    max-width: 50%;
+    border:none;/*去边框*/
+    background-color: #000;/*按钮背景色*/
+    border-radius: 10px;
+    color: white;/*文字颜色*/
+    /*padding: 14px 40px;!*内边距*!*/
+    padding:8px 60px;
+    /*margin-top: 10px;*/
+    /*margin-bottom: -10px;*/
+    letter-spacing: 1px;
+    font-size: 18px;
+    margin-bottom: 20px;
+
+
+}
+.subnav_a:hover{
+    background-color: #fff;/*按钮背景色*/
+}
+
+#info > div{
+    border-radius: 10px;
+    /*background-color:#f1f1f1;*/
+    background-color:#dadada;
+    /*padding: 10px;*/
+    margin: 10px;
+    padding: 10px;
+}
+#group{
+    text-align: center;
+}
+.fight{
+    color: #fff;
+
+    float: left;
+    /*margin: auto auto;*/
+    /*text-align: left;*/
+}.fight1{
+     color: #f67c5f;
+     /*float: left;*/
+     /*margin: auto auto;*/
+     text-align: left;
+ }.fightdiv{
+      /*color: #f67c5f;*/
+      /*float: left;*/
+      /*margin: auto auto;*/
+      margin-top: 10px;
+      width: 80%;
+      float: right;
+      text-align: left;
+      letter-spacing: 1px;
+  }
+
+  #send{
+      /*width: 30px;*/
+      /*height: 30px;*/
+      margin: -10px;
+      visibility:hidden;
+  }
+  hr{
+      margin-top: 120px;
+  }
+
+#count > div{
+    border-radius: 10px;
+    /*background-color:#f1f1f1;*/
+    background-color:#dadada;
+    /*padding: 10px;*/
+    margin: 10px;
+    padding: 10px;
+}
+#score{
+    font-size: 20px;
+    color: #e8522e;
+    font-weight: 700;
+    letter-spacing: 2px;
+}

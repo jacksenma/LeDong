@@ -176,6 +176,14 @@ body.society .nav li.society a{
     height: 20px;
 }
 
+#sex{
+    width: 20px;
+    height: inherit;
+    margin-left: -25px;
+    margin-top: -7px;
+    margin-bottom: 0;
+}
+
 
 
 
