@@ -54,6 +54,63 @@
 
     </ul>
 </div>
+<!--临时模态框-->
+<div class="modal fade" id="hd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="hdc">
+                    活动
+                </h4>
+            </div>
+            <!--模态框正文-->
+            <div class="ac_field_mo">
+                <ul>
+                    <li class="mo_img"><img class="cirimg" src="img/pic02.jpg" alt=""></li>
+                    <li class="describe_mo">
+                        <ul class="describe_mo1">
+                            <li class="title_mo"><span>登山运动</span></li>
+                            <li class="ac">创建者:<span>小弟</span></li>
+                            <li class="bc">创建时间:<span>2016-10-09</span></li>
+                            <li class="cc">人数:3/50<span></span></li>
+                            <li class="dc">详情:<span>户外短跑，一起运动,GOGOGO!</span></li>
+
+                        </ul>
+                    </li>
+                    <hr>
+                    <li>
+                        <div>
+                            <ul class="qq">
+                                <li class="qq">1. <a>小丽 </a><span>:今天跑了好久，心情舒畅</span></li>
+                                <li class="qq">2. <a>小悦 </a><span>:我也是</span></li>
+                                <li class="qq">3. <a>小第 </a><span>:生命在于运动</span></li>
+                                <!--<li>4. <a>小丽 </a><span>:今天跑了好久，心情舒畅</span></li>-->
+                                <!--<li>2. <a>小悦　　</a><span>2000</span>　步</li>-->
+                                <!--<li>3. <a>小第　　</a><span>1900</span>　步</li>-->
+                                <!--<li>2. <a>西门飞雪</a><span>1800</span>　步</li>-->
+
+                            </ul>
+                        </div>
+                    </li>
+                    <!--<li class="more_mo"><li class="more_change"><button class="more_button" onclick="">确定加入</button></li></li>-->
+                    <!--<li class="more_mo"><li class="more_mo_delete"><button class="more_button" onclick="">删除活动</button></li></li>-->
+                </ul>
+            </div>
+
+            <!--页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <!--<button type="button" class="btn btn-primary">-->
+                <!--确认发起-->
+                <!--</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
 
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade" id="follow">
@@ -166,7 +223,7 @@
 
             </ul>
             <ul class="button_group">
-                <li><button class="b1">进入圈子</button></li>
+                <li><button class="b1" data-toggle="modal" data-target="#hd">进入圈子</button></li>
                 <li><button class="b2">退出圈子</button></li>
             </ul>
         </div>
@@ -182,7 +239,7 @@
 
             </ul>
             <ul class="button_group">
-                <li><button class="b1">进入圈子</button></li>
+                <li><button class="b1" data-toggle="modal" data-target="#hd">进入圈子</button></li>
                 <li><button class="b2">退出圈子</button></li>
             </ul>
         </div>
@@ -197,7 +254,7 @@
 
             </ul>
             <ul class="button_group">
-                <li><button class="b1">进入圈子</button></li>
+                <li><button class="b1" data-toggle="modal" data-target="#hd">进入圈子</button></li>
                 <li><button class="b2">退出圈子</button></li>
             </ul>
         </div>

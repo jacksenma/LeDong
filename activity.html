@@ -63,6 +63,112 @@
     </ul>
 </div>
 
+<!--英雄帖-->
+<div class="modal fade" id="yxtie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="yxt">
+                    活动
+                </h4>
+            </div>
+            <!--模态框正文-->
+            <div class="ac_field_mo">
+                <ul>
+                    <li class="ac_img_mo"><img class="img_detail_mo" src="img/pic01.jpg"></li>
+                    <li class="ac_describ_mo">
+                        <ul>
+                            <li class="ac_title_mo">城市定向越野</li>
+                            <li class="ac_group_mo"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
+                            <li class="ac_time_mo">2016-10-26 ~ 2016-10-28</li>
+                            <li class="ac_detail_mo">江苏城市定向越野，快来参加！</li>
+                        </ul>
+                    </li>
+                    <hr>
+                    <li>
+                    <div>
+                    <ul>
+                    <li>1. <a>东方不败</a><span>2100</span>　步</li>
+                    <!--<li>2. <a>小悦　　</a><span>2000</span>　步</li>-->
+                    <!--<li>3. <a>小第　　</a><span>1900</span>　步</li>-->
+                    <li>2. <a>西门飞雪</a><span>1800</span>　步</li>
+
+                    </ul>
+                    </div>
+                    </li>
+                    <li class="more_mo"><li class="more_change"><button class="more_button" onclick="">中途退出</button></li></li>
+                    <!--<li class="more_mo"><li class="more_mo_delete"><button class="more_button" onclick="">删除活动</button></li></li>-->
+                </ul>
+            </div>
+
+            <!--页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <!--<button type="button" class="btn btn-primary">-->
+                    <!--确认发起-->
+                <!--</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--活动场-->
+<div class="modal fade" id="hd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="hdc">
+                    活动
+                </h4>
+            </div>
+            <!--模态框正文-->
+            <div class="ac_field_mo">
+                <ul>
+                    <li class="ac_img_mo"><img class="img_detail_mo" src="img/pic01.jpg"></li>
+                    <li class="ac_describ_mo">
+                        <ul>
+                            <li class="ac_title_mo">城市定向越野</li>
+                            <li class="ac_group_mo"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
+                            <li class="ac_time_mo">2016-10-26 ~ 2016-10-28</li>
+                            <li class="ac_detail_mo">江苏城市定向越野，快来参加！</li>
+                        </ul>
+                    </li>
+                    <hr>
+                    <li>
+                        <div>
+                            <ul>
+                                <li>1. <a>小丽　　</a><span>2100</span>　步</li>
+                                <!--<li>2. <a>小悦　　</a><span>2000</span>　步</li>-->
+                                <!--<li>3. <a>小第　　</a><span>1900</span>　步</li>-->
+                                <!--<li>2. <a>西门飞雪</a><span>1800</span>　步</li>-->
+
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="more_mo"><li class="more_change"><button class="more_button" onclick="">确定加入</button></li></li>
+                    <!--<li class="more_mo"><li class="more_mo_delete"><button class="more_button" onclick="">删除活动</button></li></li>-->
+                </ul>
+            </div>
+
+            <!--页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <!--<button type="button" class="btn btn-primary">-->
+                <!--确认发起-->
+                <!--</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade" id="field">
         <div class="ac_field">
@@ -78,7 +184,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
             </ul>
         </div>
         <div class="ac_field">
@@ -92,7 +198,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><button class="more_button" onclick="">我要参加</button></li>
+                <li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li>
             </ul>
         </div>
         <div class="ac_field">
@@ -107,7 +213,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
             </ul>
         </div>
         <div class="ac_field">
@@ -122,7 +228,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
             </ul>
         </div>
         <div class="ac_field">
@@ -137,7 +243,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
             </ul>
         </div>
         <div class="ac_field">
@@ -152,7 +258,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
             </ul>
         </div>
         <div class="ac_field">
@@ -167,7 +273,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
             </ul>
         </div>
         <div class="ac_field">
@@ -182,7 +288,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
             </ul>
         </div>
         <div class="ac_field">
@@ -197,7 +303,7 @@
                         <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                     </ul>
                 </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">我要参加</button></li></li>
+                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
             </ul>
         </div>
     </div>
@@ -218,7 +324,7 @@
                             <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                         </ul>
                     </li>
-                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#yxtie">查看活动</button></li></li>
                 </ul>
             </div>
             <div class="ac_field">
@@ -233,7 +339,7 @@
                             <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                         </ul>
                     </li>
-                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#yxtie">查看活动</button></li></li>
                 </ul>
             </div>
             <div class="ac_field">
@@ -248,7 +354,7 @@
                             <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                         </ul>
                     </li>
-                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#yxtie">查看活动</button></li></li>
                 </ul>
             </div>
             <div class="ac_field">
@@ -263,7 +369,7 @@
                             <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                         </ul>
                     </li>
-                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#yxtie">查看活动</button></li></li>
                 </ul>
             </div>
         </div>
@@ -282,11 +388,14 @@
                             <li class="ac_detail">江苏城市定向越野，快来参加！</li>
                         </ul>
                     </li>
-                    <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
+                    <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#yxtie">查看活动</button></li></li>
                 </ul>
             </div>
 
         </div>
+
+        <!--临时模态框-->
+
     </div>
 
     <!--我的活动-->
@@ -386,8 +495,59 @@
                     <br>
 
                     <!--<button type="button" class="btn btn-primary">现在发起</button>-->
-                    <button type="button" class="btn btn-primary btn-lg btn-block">马上发起</button>
-                    <input type="reset" class="btn btn-warning btn-lg btn-block">取消发起</input>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">马上发起</button>
+                    <!--模态框-->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                        &times;
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">
+                                        活动
+                                    </h4>
+                                </div>
+                                <!--模态框正文-->
+                                <div class="ac_field_mo">
+                                    <ul>
+                                        <li class="ac_img_mo"><img class="img_detail_mo" src="img/pic01.jpg"></li>
+                                        <li class="ac_describ_mo">
+                                            <ul>
+                                                <li class="ac_title_mo">城市定向越野</li>
+                                                <li class="ac_group_mo"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
+                                                <li class="ac_time_mo">2016-10-26 ~ 2016-10-28</li>
+                                                <li class="ac_detail_mo">江苏城市定向越野，快来参加！</li>
+                                            </ul>
+                                        </li>
+                                        <!--<hr>-->
+                                        <!--<li>-->
+                                            <!--<div>-->
+                                                <!--<ul>-->
+                                                    <!--<li><a>小丽</a><span>2100</span>步</li>-->
+                                                    <!--<li><a>小丽</a><span>2100</span>步</li>-->
+                                                    <!--<li><a>小丽</a><span>2100</span>步</li>-->
+                                                    <!---->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</li>-->
+                                        <li class="more_mo"><li class="more_mo_change"><button class="more_button" onclick="">修改活动</button></li></li>
+                                        <li class="more_mo"><li class="more_mo_delete"><button class="more_button" onclick="">删除活动</button></li></li>
+                                    </ul>
+                                </div>
+
+                                <!--页脚-->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                    </button>
+                                    <button type="button" class="btn btn-primary">
+                                        确认发起
+                                    </button>
+                                </div>
+                            </div><!-- /.modal-content -->
+                        </div><!-- /.modal -->
+                    </div>
+                    <input type="reset" id="reset" class="btn btn-warning btn-lg btn-block" value="取消发起">
 
                 </form>
             </div>
