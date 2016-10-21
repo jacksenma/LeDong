@@ -195,6 +195,9 @@ ul,li{
 .ac_condition{
     color: orangered;
 }
+.ac_score{
+    color: #8f7a66;
+}
 .more_button{
     width: 100%;
     border:none;/*去边框*/
