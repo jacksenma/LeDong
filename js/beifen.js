@@ -12,14 +12,11 @@ function doSignIn() {
             // g_image="img/banner.jpg";
             // g_sex="male";
             // g_level=1;
-            // var type='get';
-            // var infoType='userDetail';
-            // // alert('1');
-            // sendRequest('./php/restapi.php?type='+type+'&username='+username+'&infoType='+infoType,setGlobal);
+            var type='get';
+            var infoType='userDetail';
+            alert('1');
+            sendRequest('./php/restapi.php?type='+type+'&username='+username+'&infoType='+infoType,setGlobal);
             // alert('2');
-            // send();
-            // document.cookie="username="+username;
-            setCookie("username",username);
             self.location='main.html';
         }
         else if(http_request.responseText=="no"){
@@ -74,23 +71,15 @@ function signUp() {
     }
 
 }
-// function send() {
-//     var type='get';
-//     var infoType='userDetail';
-//     var username=username;
-//     sendRequest('./php/restapi.php?type='+type+'&username='+username+'&infoType='+infoType,userInit);
-// }
-// function userInit() {
-//     if (http_request.readyState == 4 && http_request.status == 200){
-//         // alert(http_request.responseText);
-//         console.log(http_request.responseText);
-//         var xmlDoc=http_request.responseXML;
-//         var g_username=xmlDoc.getElementsByTagName('name')[0].childNodes[0].nodeValue;
-//         var g_image=xmlDoc.getElementsByTagName('image')[0].childNodes[0].nodeValue;
-//         var g_sex=xmlDoc.getElementsByTagName('sex')[0].childNodes[0].nodeValue;
-//         var g_level=xmlDoc.getElementsByTagName('level')[0].childNodes[0].nodeValue;
-//         document.getElementById('username').innerHTML=g_username;
-//         document.getElementById('level').innerHTML=g_level;
-//
-//     }
-// }
+function setGlobal() {
+    if (http_request.readyState == 4 && http_request.status == 200){
+        alert(http_request.responseText);
+        var detail=http_request.responseText;
+        // g_username=detail['name'];
+        // g_level=detail['level'];
+        // g_sex=detail['sex'];
+        // g_image=detail['image'];
+        alert(g_username);
+    }
+    // alert(http_request.responseText);
+}

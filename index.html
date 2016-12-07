@@ -22,7 +22,7 @@
 
                 <h1 class="css65dcad68a16b0b">乐动</h1>
 
-                <p class="sub-heading">与世界分享你的运动快乐</p>
+                <p class="sub-heading" id="subt">与世界分享你的运动快乐</p>
                 <hr>
                 <div class="tag">
                     <ul id="myTab" class="nav nav-tabs">
@@ -41,6 +41,7 @@
                             <form class="form-horizontal" role="form">
                                 <!--用户名-->
                                 <div class="form-group">
+                                    <span id="signInTip">&nbsp;</span>
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control" id="InUsername" placeholder="用户名">
                                     </div>
@@ -48,7 +49,7 @@
                                 <!--密码-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <input type="text" class="form-control" id="InPassword" placeholder="密码">
+                                        <input type="password" class="form-control" id="InPassword" placeholder="密码">
                                     </div>
                                 </div>
 
@@ -66,7 +67,7 @@
                                 <!--登录按钮-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-info btn-block">登录</button>
+                                        <button type="button" class="btn btn-info btn-block" onclick="signIn()">登录</button>
                                     </div>
                                 </div>
                             </form>
@@ -78,6 +79,7 @@
                             <form class="form-horizontal" role="form">
                                 <!--用户名-->
                                 <div class="form-group">
+                                    <span id="signUpTip">&nbsp;</span>
                                     <div class="col-sm-12">
                                         <input type="text" class="form-control" id="UpUsername" placeholder="用户名">
                                     </div>
@@ -104,7 +106,7 @@
                                 <!--注册按钮-->
                                 <div class="form-group">
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn btn-info btn-block">注册</button>
+                                        <button type="button" class="btn btn-info btn-block" onclick="signUp()">注册</button>
                                     </div>
                                 </div>
                             </form>
@@ -125,6 +127,10 @@
 <!-- 包括所有已编译的插件 -->
 <script src="js/bootstrap.min.js"></script>
 <script src="js/ckn.js"></script>
+<script src="js/createReq.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/global.js"></script>
+<script src="js/cookie.js"></script>
 
 
 </body>

@@ -16,7 +16,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="society">
+<body class="society" onload="friendinit()">
 
 <div class="tag">
     <!--导航-->
@@ -40,14 +40,14 @@
     <ul>
         <li><img id="photo" src="img/banner.jpg" ></li>
         <li><img class="atip" data-toggle="tooltip" data-placement="top" title="" data-original-title="普通用户"  id="identity" alt="普通用户" src="img/user.svg">
-            <a href="me.html">西门飞雪</a>&nbsp;
-            <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级">3</span>
+            <a href="me.html" id="username"> </a>&nbsp;
+            <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级" id="level"> </span>
         </li>
         <hr>
         <div class="group">
             <ul>
-                <li id="id1"><a class="subnav_a" id="follow_click" href="#follow" data-toggle="tab" >我的关注</a></li>
-                <li id="id2"><a class="subnav_a" id="a" href="#fans" data-toggle="tab" >我的粉丝</a></li>
+                <li id="id1"><a class="subnav_a" id="follow_click" href="#friend" data-toggle="tab" >我的好友</a></li>
+                <!--<li id="id2"><a class="subnav_a" id="a" href="#fans" data-toggle="tab" >我的粉丝</a></li>-->
                 <li id="id3"><a class="subnav_a" id="b" href="#circle" data-toggle="tab" >我的圈子</a></li>
             </ul>
         </div>
@@ -113,106 +113,106 @@
 </div>
 
 <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade" id="follow">
+    <div class="tab-pane fade" id="friend">
         <div id="follow_list">
             <section id="ranking">
-                <span id="ranking_title">我的关注列表</span>
+                <span id="ranking_title">我的好友列表</span>
                 <hr>
                 <section id="ranking_list">
 
-                    <section class="box">
-                        <section class="col_1" title="1">1</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#"><a href="#">乐动用户</a></a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1" title="2">2</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1" title="3">3</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1">4</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1">5</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1">6</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>
-                    </section>
+                    <!--<section class="box">-->
+                        <!--<section class="col_1" title="1">1</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#"><a href="#">乐动用户</a></a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1" title="2">2</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1" title="3">3</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1">4</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1">5</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1">6</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">取消关注</button></section>-->
+                    <!--</section>-->
                 </section>
             </section>
         </div>
     </div>
 
 
-    <div class="tab-pane fade" id="fans">
-        <div id="fans_list">
-            <section id="fans_ranking">
-                <span id="fans_ranking_title">我的粉丝列表</span>
-                <hr>
-                <section id="fans_ranking_list">
+    <!--<div class="tab-pane fade" id="fans">-->
+        <!--<div id="fans_list">-->
+            <!--<section id="fans_ranking">-->
+                <!--<span id="fans_ranking_title">我的粉丝列表</span>-->
+                <!--<hr>-->
+                <!--<section id="fans_ranking_list">-->
 
-                    <section class="box">
-                        <section class="col_1" title="1">1</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#"><a href="#">乐动用户</a></a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1" title="2">2</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1" title="3">3</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1">4</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1">5</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
-                    </section>
-                    <section class="box">
-                        <section class="col_1">6</section>
-                        <section class="col_2"><img src="./img/pic.jpg"  /></section>
-                        <section class="col_3"><a href="#">乐动用户</a></section>
-                        <section class="col_4"><button class="btn btn-info btn-block">关注</button></section>
-                    </section>
+                    <!--<section class="box">-->
+                        <!--<section class="col_1" title="1">1</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#"><a href="#">乐动用户</a></a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1" title="2">2</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1" title="3">3</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1">4</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1">5</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">关注</button></section>-->
+                    <!--</section>-->
+                    <!--<section class="box">-->
+                        <!--<section class="col_1">6</section>-->
+                        <!--<section class="col_2"><img src="./img/pic.jpg"  /></section>-->
+                        <!--<section class="col_3"><a href="#">乐动用户</a></section>-->
+                        <!--<section class="col_4"><button class="btn btn-info btn-block">关注</button></section>-->
+                    <!--</section>-->
 
-                </section>
-            </section>
-        </div>
-    </div>
+                <!--</section>-->
+            <!--</section>-->
+        <!--</div>-->
+    <!--</div>-->
     <div class="tab-pane fade" id="circle">
 
-        <div id="aa">
+        <div id="c1">
             <img src="img/pic01.jpg" alt="">
             <ul class="describe">
                 <li class="title"><span>户外健身</span></li>
@@ -224,11 +224,11 @@
             </ul>
             <ul class="button_group">
                 <li><button class="b1" data-toggle="modal" data-target="#hd">进入圈子</button></li>
-                <li><button class="b2">退出圈子</button></li>
+                <li><button class="b2" onclick="exitCircle(1)" >退出圈子</button></li>
             </ul>
         </div>
 
-        <div id="bb">
+        <div id="c2">
             <img src="img/pic03.jpg" alt="">
             <ul class="describe">
                 <li class="title"><span>户外短跑</span></li>
@@ -240,10 +240,10 @@
             </ul>
             <ul class="button_group">
                 <li><button class="b1" data-toggle="modal" data-target="#hd">进入圈子</button></li>
-                <li><button class="b2">退出圈子</button></li>
+                <li><button class="b2" onclick="exitCircle(2)" >退出圈子</button></li>
             </ul>
         </div>
-        <div id="cc">
+        <div id="c3">
             <img src="img/pic02.jpg" alt="">
             <ul class="describe">
                 <li class="title"><span>登山运动</span></li>
@@ -255,7 +255,7 @@
             </ul>
             <ul class="button_group">
                 <li><button class="b1" data-toggle="modal" data-target="#hd">进入圈子</button></li>
-                <li><button class="b2">退出圈子</button></li>
+                <li><button class="b2" onclick="exitCircle(3)" >退出圈子</button></li>
             </ul>
         </div>
     </div>
@@ -269,7 +269,8 @@
     <!-- 包括所有已编译的插件 -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/society.js"></script>
-    <script src="js/commom.js"></script>
-
+    <script src="js/init.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/createReq.js"></script>
 </body>
 </html>

@@ -86,7 +86,8 @@ ul,li{
      /*color: #f67c5f;*/
     /*float: left;*/
     /*margin: auto auto;*/
-    margin-top: 10px;
+    /*margin-top: 10px;*/
+    margin: 10px;
     width: 80%;
     float: right;
     text-align: left;
@@ -129,7 +130,7 @@ ul,li{
     letter-spacing: 1px;
     font-size: 18px;
     margin-bottom: 20px;
-
+/*margin: 4px;*/
 
 }
 .subnav_a:hover{
@@ -158,6 +159,7 @@ ul,li{
 .ac_field{
     margin: auto;
     /*width: 47%;*/
+    /*float: left;*/
     width: 30%;
     display: inline-block;
 
@@ -202,7 +204,7 @@ ul,li{
     width: 100%;
     border:none;/*去边框*/
     background-color: #000;/*按钮背景色*/
-    border-radius: 0 0 10px 10px;
+    border-radius: 0 0 0px 0px;
     color: white;/*文字颜色*/
     /*padding: 14px 40px;!*内边距*!*/
     padding:8px 60px;
@@ -215,7 +217,47 @@ ul,li{
     background-color: #e8522e;/*按钮背景色*/
 }
 
+.more_button1{
+    width: 100%;
+    border:none;/*去边框*/
+    background-color: #000;/*按钮背景色*/
+    border-radius: 0 0 0px 0px;
+    color: white;/*文字颜色*/
+    /*padding: 14px 40px;!*内边距*!*/
+    padding:8px 60px;
+    /*margin-top: 10px;*/
+    /*margin-bottom: -10px;*/
+    letter-spacing: 1px;
+    font-size: 18px;
+    display: none;
+}
+.more_button1:hover{
+    background-color: #e8522e;/*按钮背景色*/
+}
+/*.id5{*/
+    /*display: none;*/
+/*}*/
+.more_buttone{
+    width: 100%;
+    border:none;/*去边框*/
+    background-color: #000;/*按钮背景色*/
+    border-radius: 0 0 10px 10px;
+    color: white;/*文字颜色*/
+    /*padding: 14px 40px;!*内边距*!*/
+    padding:8px 60px;
+    /*margin-top: 10px;*/
+    /*margin-bottom: -10px;*/
+    letter-spacing: 1px;
+    font-size: 18px;
+    /*display: none;*/
+}
+.more_buttone:hover{
+    background-color: #e8522e;/*按钮背景色*/
+}
 
+/*#ac_field_mo{*/
+    /*border:5px solid #1E88E5;*/
+/*}*/
 
 /*英雄帖*/
 #tie > div{
@@ -271,6 +313,14 @@ ul,li{
     display: none;
 }
 #mySet > div{
+    border-radius: 10px;
+    /*background-color:#f1f1f1;*/
+    background-color:#dadada;
+    /*padding: 10px;*/
+    margin: 10px;
+    padding: 10px;
+}
+#myModify > div{
     border-radius: 10px;
     /*background-color:#f1f1f1;*/
     background-color:#dadada;
@@ -339,6 +389,10 @@ ul,li{
 }
 .more_change{
     width: 100%;
+}
+#f1{
+    /*visibility: hidden;*/
+    display: none;
 }
 /*.ac_time_mo{*/
 

@@ -14,7 +14,7 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="activity">
+<body class="activity" onload="allInit()">
 
 <div class="tag">
     <!--导航-->
@@ -39,8 +39,8 @@
     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
         <li><img id="photo" src="img/banner.jpg" ></li>
         <li><img class="atip" data-toggle="tooltip" data-placement="top" title="" data-original-title="普通用户"  id="identity" alt="普通用户" src="img/user.svg">
-            <a href="me.html">西门飞雪</a>&nbsp;
-            <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级">3</span>
+            <a href="me.html" id="username"> </a>&nbsp;
+            <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级" id="level"> </span>
         </li>
 
         <div class="fightdiv">
@@ -57,12 +57,13 @@
             <li id="id2"><a class="subnav_a" href="#tie" data-toggle="tab" >英雄帖</a></li>
             <li id="id3"><a class="subnav_a" href="#myActivity" data-toggle="tab" >我的活动</a></li>
          　　<li id="id4"><a class="subnav_a" id ="faqi" href="#mySet" data-toggle="tab" >发起活动</a></li>
+                <li id="id5"><a id ="qqmodify" href="#myModify" data-toggle="tab" ></a></li>
             </ul>
         </div>
 
     </ul>
 </div>
-
+<!--<li id="id5"><a class="subnav_a" id ="faqisq" href="#mySet" data-toggle="tab" ></a></li>-->
 <!--英雄帖-->
 <div class="modal fade" id="yxtie" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -117,7 +118,7 @@
 </div>
 
 <!--活动场-->
-<div class="modal fade" id="hd" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" name="acField" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -130,36 +131,36 @@
             </div>
             <!--模态框正文-->
             <div class="ac_field_mo">
-                <ul>
-                    <li class="ac_img_mo"><img class="img_detail_mo" src="img/pic01.jpg"></li>
+                <ul id="acul">
+                    <li class="ac_img_mo"><img class="img_detail_mo" src="img/pic01.jpg" id="f_img"></li>
                     <li class="ac_describ_mo">
                         <ul>
-                            <li class="ac_title_mo">城市定向越野</li>
-                            <li class="ac_group_mo"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-                            <li class="ac_time_mo">2016-10-26 ~ 2016-10-28</li>
-                            <li class="ac_detail_mo">江苏城市定向越野，快来参加！</li>
+                            <li class="ac_title_mo" id="f_title"></li>
+                            <li class="ac_group_mo"><span class="ac_kind" id="f_kind"></span>&nbsp;&nbsp;<span class="ac_num" id="f_total"></span>&nbsp;&nbsp;<span class="ac_condition" id="f_condition"></span> <span class="ac_score" id="f_credit"></span></li>
+                            <li class="ac_time_mo" id="f_time"></li>
+                            <li class="ac_detail_mo" id="f_introduction"></li>
                         </ul>
                     </li>
                     <hr>
                     <li>
                         <div>
-                            <ul>
-                                <li>1. <a>小丽　　</a><span>2100</span>　步</li>
+                            <ul id="p_list">
+                                <!--<li>1. <a>小丽　　</a><span>2100</span>　步</li>-->
                                 <!--<li>2. <a>小悦　　</a><span>2000</span>　步</li>-->
                                 <!--<li>3. <a>小第　　</a><span>1900</span>　步</li>-->
                                 <!--<li>2. <a>西门飞雪</a><span>1800</span>　步</li>-->
-
                             </ul>
                         </div>
                     </li>
-                    <li class="more_mo"><li class="more_change"><button class="more_button" onclick="">确定加入</button></li></li>
+                    <li class="more_mo"><button class="more_button" onclick="" id="join">确定加入</button></li>
+                    <li class="more_mo"><button class="more_button1" onclick="" id="delete" >删除活动</button></li>
                     <!--<li class="more_mo"><li class="more_mo_delete"><button class="more_button" onclick="">删除活动</button></li></li>-->
                 </ul>
             </div>
 
             <!--页脚-->
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="close">关闭
                 </button>
                 <!--<button type="button" class="btn btn-primary">-->
                 <!--确认发起-->
@@ -169,142 +170,46 @@
     </div><!-- /.modal -->
 </div>
 
+
+<!--所有进行或未开始的活动-->
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade" id="field">
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">未开始</span> <span class="ac_score">200积分</span></li>
-                        <!--<li class="ac_num">1/2</li>-->
-                        <!--<li class="ac_condition">进行中</li>-->
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-                        <li class="ac_time">2016-10-18 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">多人竞赛</span>&nbsp;&nbsp;<span class="ac_num">124</span>&nbsp;&nbsp;<span class="ac_condition">已结束</span> <span class="ac_score">100积分</span></li>
+    </div>
+<!--修改活动-->
+    <div class="tab-pane fade" id="myModify">
+        <div>
+            <h3>修改活动</h3>
 
-                        <li class="ac_time">2016-10-15 ~ 2016-10-18</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">400积分</span></li>
+            <div>
 
-                        <li class="ac_time">2016-10-13 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
+                <form action="" role="form">
+                    活动名称
+                    <input type="text" class="form-control" placeholder="8字以内" id="mac_name">
+                    <br>
+                    活动类型
+                    <select class="form-control" id="mac_type">
+                        <option value="1">单人PK</option>
+                        <option value="2">多人竞赛</option>
+                    </select>
+                    <br>
+                    活动简介
+                    <textarea class="form-control" rows="3" id="mac_introduction"></textarea>
+                    <br>
+                    开始时间:
+                    <input type="date" id="mac_start">
+                    结束时间:
+                    <input type="date" id="mac_end">
+                    <br>
+                    <br>
+                    保证金(积分)
+                    <input type="text" class="form-control" placeholder="输入积分数" id="mac_credit">
+                    <br>
+                    <br>
+                    <button type="button" id="mfaqiq" class="btn btn-primary btn-lg btn-block" onclick="modify()">确认修改</button>
+                    <input type="reset" id="mreset" class="btn btn-warning btn-lg btn-block" value="取消修改">
 
-                        <li class="ac_time">2016-10-16 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-
-                        <li class="ac_time">2016-10-16 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-
-                        <li class="ac_time">2016-10-14 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-
-                        <li class="ac_time">2016-10-13 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-
-                        <li class="ac_time">2016-10-13 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="" data-toggle="modal" data-target="#hd">我要参加</button></li></li>
-            </ul>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -400,62 +305,62 @@
 
     <!--我的活动-->
     <div class="tab-pane fade" id="myActivity">
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
-            </ul>
-        </div>
-        <div class="ac_field">
-            <ul>
-                <li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>
-                <li class="ac_describ">
-                    <ul>
-                        <li class="ac_title">城市定向越野</li>
-                        <li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-                        <li class="ac_time">2016-10-26 ~ 2016-10-28</li>
-                        <li class="ac_detail">江苏城市定向越野，快来参加！</li>
-                    </ul>
-                </li>
-                <li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>
-            </ul>
-        </div>
+        <!--<div class="ac_field">-->
+            <!--<ul>-->
+                <!--<li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>-->
+                <!--<li class="ac_describ">-->
+                    <!--<ul>-->
+                        <!--<li class="ac_title">城市定向越野</li>-->
+                        <!--<li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>-->
+                        <!--<li class="ac_time">2016-10-26 ~ 2016-10-28</li>-->
+                        <!--<li class="ac_detail">江苏城市定向越野，快来参加！</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="ac_field">-->
+            <!--<ul>-->
+                <!--<li class="ac_img"><img class="img_detail" src="img/pic03.jpg"></li>-->
+                <!--<li class="ac_describ">-->
+                    <!--<ul>-->
+                        <!--<li class="ac_title">城市定向越野</li>-->
+                        <!--<li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>-->
+                        <!--<li class="ac_time">2016-10-26 ~ 2016-10-28</li>-->
+                        <!--<li class="ac_detail">江苏城市定向越野，快来参加！</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="ac_field">-->
+            <!--<ul>-->
+                <!--<li class="ac_img"><img class="img_detail" src="img/pic01.jpg"></li>-->
+                <!--<li class="ac_describ">-->
+                    <!--<ul>-->
+                        <!--<li class="ac_title">城市定向越野</li>-->
+                        <!--<li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>-->
+                        <!--<li class="ac_time">2016-10-26 ~ 2016-10-28</li>-->
+                        <!--<li class="ac_detail">江苏城市定向越野，快来参加！</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="ac_field">-->
+            <!--<ul>-->
+                <!--<li class="ac_img"><img class="img_detail" src="img/pic02.jpg"></li>-->
+                <!--<li class="ac_describ">-->
+                    <!--<ul>-->
+                        <!--<li class="ac_title">城市定向越野</li>-->
+                        <!--<li class="ac_group"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>-->
+                        <!--<li class="ac_time">2016-10-26 ~ 2016-10-28</li>-->
+                        <!--<li class="ac_detail">江苏城市定向越野，快来参加！</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li class="more"><li class="more"><button class="more_button" onclick="">查看活动</button></li></li>-->
+            <!--</ul>-->
+        <!--</div>-->
     </div>
 
     <div class="tab-pane fade" id="mySet">
@@ -466,124 +371,101 @@
 
                 <form action="" role="form">
                     活动名称
-                    <input type="text" class="form-control" placeholder="8字以内">
+                    <input type="text" class="form-control" placeholder="8字以内" id="ac_name">
                     <br>
                 活动类型
-                    <select class="form-control">
-                        <option>单人PK</option>
-                        <option>多人竞赛</option>
+                    <select class="form-control" id="ac_type">
+                        <option value="1">单人PK</option>
+                        <option value="2">多人竞赛</option>
                     </select>
                     <br>
                 活动简介
-                    <textarea class="form-control" rows="3"></textarea>
+                    <textarea class="form-control" rows="3" id="ac_introduction"></textarea>
                     <br>
                     开始时间:
-                    <input type="date">
+                    <input type="date" id="ac_start">
                     结束时间:
-                    <input type="date">
+                    <input type="date" id="ac_end">
                     <br>
                     <br>
                     保证金(积分)
-                    <input type="text" class="form-control" placeholder="输入积分数">
-                    <br>
-                    参与方式
-                    <input type="radio" name="optionsRadios" id="all" value="all" checked>任何人
-                    <input type="radio" name="optionsRadios" id="friend" value="friend">邀请好友
-
+                    <input type="text" class="form-control" placeholder="输入积分数" id="ac_credit">
                     <br>
                     <br>
-                    <br>
-
-                    <!--<button type="button" class="btn btn-primary">现在发起</button>-->
-                    <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#myModal">马上发起</button>
-                    <!--模态框-->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-                                        &times;
-                                    </button>
-                                    <h4 class="modal-title" id="myModalLabel">
-                                        活动
-                                    </h4>
-                                </div>
-                                <!--模态框正文-->
-                                <div class="ac_field_mo">
-                                    <ul>
-                                        <li class="ac_img_mo"><img class="img_detail_mo" src="img/pic01.jpg"></li>
-                                        <li class="ac_describ_mo">
-                                            <ul>
-                                                <li class="ac_title_mo">城市定向越野</li>
-                                                <li class="ac_group_mo"><span class="ac_kind">单人PK</span>&nbsp;&nbsp;<span class="ac_num">1/2</span>&nbsp;&nbsp;<span class="ac_condition">进行中</span> <span class="ac_score">200积分</span></li>
-                                                <li class="ac_time_mo">2016-10-26 ~ 2016-10-28</li>
-                                                <li class="ac_detail_mo">江苏城市定向越野，快来参加！</li>
-                                            </ul>
-                                        </li>
-                                        <!--<hr>-->
-                                        <!--<li>-->
-                                            <!--<div>-->
-                                                <!--<ul>-->
-                                                    <!--<li><a>小丽</a><span>2100</span>步</li>-->
-                                                    <!--<li><a>小丽</a><span>2100</span>步</li>-->
-                                                    <!--<li><a>小丽</a><span>2100</span>步</li>-->
-                                                    <!---->
-                                                <!--</ul>-->
-                                            <!--</div>-->
-                                        <!--</li>-->
-                                        <li class="more_mo"><li class="more_mo_change"><button class="more_button" onclick="">修改活动</button></li></li>
-                                        <li class="more_mo"><li class="more_mo_delete"><button class="more_button" onclick="">删除活动</button></li></li>
-                                    </ul>
-                                </div>
-
-                                <!--页脚-->
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
-                                    </button>
-                                    <button type="button" class="btn btn-primary">
-                                        确认发起
-                                    </button>
-                                </div>
-                            </div><!-- /.modal-content -->
-                        </div><!-- /.modal -->
-                    </div>
+                    <button type="button" id="faqiq" class="btn btn-primary btn-lg btn-block" onclick="organize()">马上发起</button>
                     <input type="reset" id="reset" class="btn btn-warning btn-lg btn-block" value="取消发起">
 
                 </form>
             </div>
-
-
-            <!--<div>-->
-                <!--<span>活动简介</span>-->
-                <!--<form role="form">-->
-                    <!--<div class="form-group">-->
-                        <!--<label for="name">文本框</label>-->
-                        <!--<textarea class="form-control" rows="3"></textarea>-->
-                    <!--</div>-->
-                <!--</form>-->
-            <!--</div>-->
-
-            <!--<div>-->
-                <!--<span>开始时间</span>-->
-                <!--<input type="datetime-local">-->
-
-            <!--</div>-->
-
-
-
-
         </div>
     </div>
 </div>
 
 
 
+<!--我的活动模态框-->
+<div class="modal fade" name="myAc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                </button>
+                <h4 class="modal-title" id="mhdc">
+                    活动
+                </h4>
+            </div>
+            <!--模态框正文-->
+            <div class="ac_field_mo">
+                <ul id="macul">
+                    <li class="ac_img_mo"><img class="img_detail_mo" src="img/pic01.jpg" id="m_img"></li>
+                    <li class="ac_describ_mo">
+                        <ul>
+                            <li class="ac_title_mo" id="m_title"></li>
+                            <li class="ac_group_mo"><span class="ac_kind" id="m_kind"></span>&nbsp;&nbsp;<span class="ac_num" id="m_total"></span>&nbsp;&nbsp;<span class="ac_condition" id="m_condition"></span> <span class="ac_score" id="m_credit"></span></li>
+                            <li class="ac_time_mo" id="m_time"></li>
+                            <li class="ac_detail_mo" id="m_introduction"></li>
+                        </ul>
+                    </li>
+                    <hr>
+                    <li>
+                        <div>
+                            <ul id="mp_list">
+                                <!--<li>1. <a>小丽　　</a><span>2100</span>　步</li>-->
+                                <!--<li>2. <a>小悦　　</a><span>2000</span>　步</li>-->
+                                <!--<li>3. <a>小第　　</a><span>1900</span>　步</li>-->
+                                <!--<li>2. <a>西门飞雪</a><span>1800</span>　步</li>-->
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="more_mo"><button class="more_button" onclick="" id="xiugai">修改活动</button></li>
+                    <!--<li class="more_mo"><li class="more_mo_delete"><button class="more_button" onclick="">删除活动</button></li></li>-->
+                </ul>
+            </div>
+
+            <!--页脚-->
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                </button>
+                <!--<button type="button" class="btn btn-primary">-->
+                <!--确认发起-->
+                <!--</button>-->
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal -->
+</div>
+
+<!--<a id ="modify" href="#myModify" data-toggle="tab" ></a>-->
+
+
     <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- 包括所有已编译的插件 -->
     <script src="js/bootstrap.min.js"></script>
-<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-<script src="js/commom.js"></script>
-<script src="js/activity.js"></script>
+    <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+    <script src="js/activity.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/cookie.js"></script>
+    <script src="js/createReq.js"></script>
 </body>
 </html>

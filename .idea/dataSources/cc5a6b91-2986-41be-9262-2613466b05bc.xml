@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Sqlite (Xerial) - Ledong.db">
+  <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+    <schema id="1">
+      <visible>1</visible>
+    </schema>
+    <table id="2" parent="1" name="activity"/>
+    <table id="3" parent="1" name="fans"/>
+    <table id="4" parent="1" name="friend"/>
+    <table id="5" parent="1" name="hero"/>
+    <table id="6" parent="1" name="myActivity"/>
+    <table id="7" parent="1" name="myCredit"/>
+    <table id="8" parent="1" name="mySport"/>
+    <table id="9" parent="1" name="myTeam"/>
+    <table id="10" parent="1" name="sleep"/>
+    <table id="11" parent="1" name="sleepDetail"/>
+    <table id="12" parent="1" name="sqlite_sequence"/>
+    <table id="13" parent="1" name="team"/>
+    <table id="14" parent="1" name="user"/>
+    <table id="15" parent="1" name="weight"/>
+    <column id="16" parent="2" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="17" parent="2" name="name">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="18" parent="2" name="organizerId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="19" parent="2" name="credit">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="20" parent="2" name="condition">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="21" parent="2" name="image">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+      <default-expression>&apos;img/banner.jpg&apos;</default-expression>
+    </column>
+    <column id="22" parent="2" name="introduction">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="23" parent="2" name="start">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="24" parent="2" name="end">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="25" parent="2" name="type">
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="26" parent="2">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="27" parent="3" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="28" parent="3" name="fansId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <foreign-key id="29" parent="3" name="#FAKE_fans_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>userId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>user(id)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="30" parent="3" name="#FAKE_fans_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>fansId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>user(id)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="31" parent="4" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="32" parent="4" name="friendId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <foreign-key id="33" parent="4" name="#FAKE_friend_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>userId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>user(id)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="34" parent="4" name="#FAKE_friend_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>friendId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>user(id)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="35" parent="5" name="fromId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="36" parent="5" name="toId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="37" parent="5" name="talk">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="38" parent="5" name="activityId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <foreign-key id="39" parent="5" name="#FAKE_hero_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>activityId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.activity.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="40" parent="6" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="41" parent="6" name="activityId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="42" parent="6" name="step">
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <foreign-key id="43" parent="6" name="#FAKE_myActivity_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>userId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>user(id)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="44" parent="6" name="#FAKE_myActivity_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>activityId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.activity.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="45" parent="7" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="46" parent="7" name="date">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="47" parent="7" name="detail">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="48" parent="7" name="activityId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="49" parent="7">
+      <columns>activityId</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="50" parent="7" name="#FAKE_myCredit_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>userId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>user(id)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="51" parent="7" name="#FAKE_myCredit_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>activityId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.activity.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="52" parent="8" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="53" parent="8" name="date">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="54" parent="8" name="distance">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+    </column>
+    <column id="55" parent="8" name="time">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+    </column>
+    <column id="56" parent="8" name="step">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="57" parent="8" name="calorie">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="58" parent="8" name="goal">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+    </column>
+    <column id="59" parent="9" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="60" parent="9" name="teamId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <key id="61" parent="9">
+      <columns>teamId</columns>
+      <primary>1</primary>
+    </key>
+    <foreign-key id="62" parent="9" name="#FAKE_myTeam_2">
+      <name-surrogate>1</name-surrogate>
+      <columns>userId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>user(id)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <foreign-key id="63" parent="9" name="#FAKE_myTeam_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>teamId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>~.team.#1</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="64" parent="10" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="65" parent="10" name="date">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="66" parent="10" name="start">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="67" parent="10" name="end">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="68" parent="10" name="deep">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+    </column>
+    <foreign-key id="69" parent="10" name="#FAKE_sleep_1">
+      <name-surrogate>1</name-surrogate>
+      <columns>userId</columns>
+      <deferrable>1</deferrable>
+      <initially-deferred>1</initially-deferred>
+      <ref-key>user(id)</ref-key>
+      <cascade-update-rule>no_action</cascade-update-rule>
+      <cascade-delete-rule>delete</cascade-delete-rule>
+    </foreign-key>
+    <column id="70" parent="11" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="71" parent="11" name="date">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="72" parent="11" name="time">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="73" parent="11" name="value">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+    </column>
+    <column id="74" parent="12" name="name">
+      <data-type>(0,-1)|12</data-type>
+    </column>
+    <column id="75" parent="12" name="seq">
+      <data-type>(0,-1)|12</data-type>
+    </column>
+    <column id="76" parent="13" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="77" parent="13" name="name">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="78" parent="13" name="date">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="79" parent="13" name="introduction">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <key id="80" parent="13">
+      <columns>id</columns>
+      <primary>1</primary>
+    </key>
+    <column id="81" parent="14" name="id">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+    </column>
+    <column id="82" parent="14" name="name">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="83" parent="14" name="sex">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+      <default-expression>&apos;male&apos;</default-expression>
+    </column>
+    <column id="84" parent="14" name="password">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="85" parent="14" name="image">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+      <default-expression>&apos;img/banner.jpg&apos;</default-expression>
+    </column>
+    <column id="86" parent="14" name="location">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="87" parent="14" name="hobby">
+      <mandatory>1</mandatory>
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+    <column id="88" parent="14" name="level">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+      <default-expression>1</default-expression>
+    </column>
+    <column id="89" parent="14" name="signature">
+      <data-type>TEXT(0,-1)|12</data-type>
+      <default-expression>&apos;这家伙很懒，什么签名都没留下...&apos;</default-expression>
+    </column>
+    <column id="90" parent="14" name="weight">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+      <default-expression>60</default-expression>
+    </column>
+    <column id="91" parent="14" name="height">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+      <default-expression>165</default-expression>
+    </column>
+    <column id="92" parent="14" name="age">
+      <mandatory>1</mandatory>
+      <data-type>INTEGER(0,-1)|4</data-type>
+      <default-expression>22</default-expression>
+    </column>
+    <column id="93" parent="15" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>INT(0,-1)|4</data-type>
+    </column>
+    <column id="94" parent="15" name="weight">
+      <mandatory>1</mandatory>
+      <data-type>REAL(0,-1)|6</data-type>
+    </column>
+    <column id="95" parent="15" name="date">
+      <data-type>TEXT(0,-1)|12</data-type>
+    </column>
+  </database-model>
+</dataSource>

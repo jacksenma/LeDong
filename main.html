@@ -18,7 +18,7 @@
 
 
 </head>
-<body class="main">
+<body class="main" onload="send()">
 
 <div class="tag">
     <!--导航-->
@@ -48,8 +48,8 @@
     <ul>
         <li><img id="photo" src="img/banner.jpg" ></li>
         <li><img class="atip" data-toggle="tooltip" data-placement="top" title="" data-original-title="普通用户"  id="identity" alt="普通用户" src="img/user.svg">
-            <a href="me.html">西门飞雪</a>&nbsp;
-            <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级">3</span></li>
+            <a href="me.html" id="username">  </a>&nbsp;
+            <span class="badge" data-toggle="tooltip" data-placement="top" title="" data-original-title="用户等级" id="level"> </span></li>
 
     </ul>
 </div>
@@ -132,7 +132,11 @@
 <!-- 包括所有已编译的插件 -->
 <script src="js/bootstrap.min.js"></script>
 <script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
-<script src="js/commom.js"></script>
+<script src="js/main.js"></script>
+<script src="js/init.js"></script>
+<script src="js/cookie.js"></script>
+<script src="js/createReq.js"></script>
+
 
 <!--<script src="https://code.highcharts.com/highcharts.js"></script>-->
 <!--<script src="https://code.highcharts.com/highcharts-more.js"></script>-->
